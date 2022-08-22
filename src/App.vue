@@ -8,15 +8,12 @@ import {postDB} from "./db/post"
 const state = useStorage('post', postDB, localStorage)
 const drag = ref(false)
 
-function log(value) {
-  console.log(value)
-}
 </script>
 
 <template>
   <draggable
       class="wrapper"
-      :modelValue="state.data"
+      v-model="state.data"
       @start="drag = true"
       @end="drag = false"
       item-key="index"
