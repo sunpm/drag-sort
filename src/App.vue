@@ -8,6 +8,10 @@ import {postDB} from "./db/post"
 const state = useStorage('post', postDB, localStorage)
 const drag = ref(false)
 
+function log(value) {
+  console.log(value)
+}
+
 </script>
 
 <template>
